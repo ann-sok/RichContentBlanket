@@ -1,0 +1,225 @@
+.hero {
+  background-image: url("../assets/image/bg-stars-m.png");
+  background-image: -webkit-image-set(
+    url("../assets/image/bg-stars-m.webp"),
+    url("../assets/image/bg-stars-m.png")
+  );
+  background-image: image-set(
+    url("../assets/image/bg-stars-m.webp") type("image/webp"),
+    url("../assets/image/bg-stars-m.png") type("image/png")
+  );
+  background-color: #333087;
+  background-repeat: no-repeat;
+  // background-position-y: 84%;
+  background-position-y: top;
+  background-position-x: center;
+  color: #ffffff;
+  padding: 28px 0 15px;
+  @media (max-width: 320px) {
+    background-image: url("../assets/image/bg-stars-s.png");
+    background-image: -webkit-image-set(
+      url("../assets/image/bg-stars-s.webp"),
+      url("../assets/image/bg-stars-s.png")
+    );
+    background-image: image-set(
+      url("../assets/image/bg-stars-s.webp") type("image/webp"),
+      url("../assets/image/bg-stars-s.png") type("image/png")
+    );
+    background-position-y: top;
+    background-size: 100%;
+  }
+  @include media(md) {
+    padding: 58px 0 35px;
+  }
+  @media (min-width: 1025px) {
+    background-image: url("../assets/image/bg-stars-l.png");
+    // background-image: -webkit-image-set(
+    //   url("../assets/image/bg-stars-l.webp"),
+    //   url("../assets/image/bg-stars-l.png")
+    // );
+    // background-image: image-set(
+    //   url("../assets/image/bg-stars-l.webp") type("image/webp"),
+    //   url("../assets/image/bg-stars-l.png") type("image/png")
+    // );
+  }
+  @include media(xl) {
+    padding: 90px 0 75px;
+  }
+  @media (min-width: 1537px) {
+    background-size: auto;
+  }
+
+  &__header {
+    @include media(md) {
+      display: flex;
+      margin-right: -50px;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    line-height: 1.84;
+    margin: 20px 0;
+    @include media(md) {
+      line-height: 1.57;
+      font-size: 42px;
+      margin: 20px auto 0;
+      padding: 0 20px;
+    }
+    @include media(xl) {
+      line-height: 1.3;
+      font-size: 63px;
+      margin: 45px auto 0;
+    }
+    &--XL {
+      font-size: 46px;
+      @include media(md) {
+        font-size: 56px;
+      }
+      @include media(xl) {
+        font-size: 83px;
+      }
+    }
+  }
+  &__images {
+    margin: 0 auto;
+    @include media(md) {
+      position: relative;
+      min-height: 380px;
+      max-width: 828px;
+    }
+    @include media(lg) {
+      max-width: 928px;
+      min-height: 360px;
+    }
+    @include media(xl) {
+      min-height: 532px;
+      max-width: 1440px;
+    }
+  }
+  &__img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    @include media(md) {
+      position: absolute;
+    }
+    &--right {
+      margin-bottom: 38px;
+      width: 283px;
+      margin: 0 auto;
+      @include media(md) {
+        width: 66.702586%; /* 619px/928 */
+        right: 0;
+        bottom: 18%;
+      }
+
+      @include media(xl) {
+        width: 61.875%; /* 891px/1440 */
+        bottom: 12%;
+        right: 0.4%;
+      }
+    }
+    &--left {
+      display: none;
+      @include media(md) {
+        display: block;
+        bottom: 0;
+        width: 56.142241%; /* 521px/928 */
+      }
+      @include media(xl) {
+        width: 52%; /* 750px/1440 */
+      }
+    }
+  }
+}
+
+.logo {
+  margin: auto;
+  aspect-ratio: 1 / 1;
+  width: 185px;
+  font-size: 19px;
+  @include media(md) {
+    width: 247px;
+    margin: 0;
+  }
+  @include media(xl) {
+    width: 345px;
+  }
+}
+
+.features {
+  @include media(md) {
+    display: grid;
+    // grid-template-columns: 41.45% 36%;
+    grid-template-columns: minmax(41.45%, max-content) minmax(36%, max-content);
+    justify-content: space-between;
+    align-items: baseline;
+    grid-column-gap: 10px;
+    text-align: left;
+  }
+  &__item {
+    margin-bottom: 34px;
+    @include media(xl) {
+      margin-bottom: 60px;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    margin: 20px 0 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    @include media(md) {
+      font-size: 38px;
+      margin: 37px 0 0;
+      text-transform: none;
+    }
+    @include media(xl) {
+      font-size: 52px;
+      margin: 85px 0 0;
+    }
+  }
+  &__text {
+    font-size: 21px;
+    margin: 10px 0 0;
+    @include media(md) {
+      font-size: inherit;
+    }
+    @include media(xl) {
+      margin: 14px 0 0;
+    }
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media(md) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  &__icon {
+    &--check {
+      @include media(md) {
+        position: relative;
+        bottom: 15px;
+      }
+      @include media(md) {
+        bottom: 19px;
+      }
+    }
+  }
+  &__text {
+    font-size: 21px;
+    margin: 4px 0 30px;
+    @include media(md) {
+      font-size: inherit;
+      margin: 0 0 0 17px;
+    }
+  }
+}

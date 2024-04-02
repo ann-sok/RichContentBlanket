@@ -1,0 +1,135 @@
+.about {
+  background: #ffffff;
+  @include media(md) {
+    padding-bottom: 40px;
+  }
+  @include media(md) {
+    padding-bottom: 78px;
+  }
+  &__container {
+  }
+  &__block {
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 26px;
+    @include media(md) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      text-align: left;
+      gap: 30px;
+      margin-bottom: 14px;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+    @include media(lg) {
+      margin-bottom: 5px;
+    }
+  }
+  &__img-wrap {
+    max-width: 220px;
+    aspect-ratio: 1;
+    @include media(md) {
+      max-width: 323px;
+      flex: 1 0 323px;
+    }
+    @include media(xl) {
+      max-width: 501px;
+      flex: 1 0 501px;
+    }
+  }
+  &__img {
+  }
+  &__info {
+  }
+  &__title {
+    color: #e27601;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 12px 0 10px;
+    @include media(md) {
+      font-size: 35px;
+      margin: 0 0 10px;
+    }
+    @include media(xl) {
+      font-size: 63px;
+    }
+  }
+  &__text {
+    margin: 0;
+  }
+}
+
+.point {
+  margin: 30px auto;
+  position: relative;
+  width: fit-content;
+  text-align: left;
+  @include media(md) {
+    margin: 55px auto 95px;
+  }
+  @include media(lg) {
+    margin: 92px auto 98px;
+  }
+  &__text {
+    font-size: 19px;
+    @include media(md) {
+      font-size: 29px;
+    }
+    @include media(lg) {
+      font-size: 35px;
+    }
+    @include media(xl) {
+      font-size: 38px;
+    }
+  }
+  &__text-top {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    position: relative;
+    right: 4px;
+    @include media(md) {
+      // display: inline-block;
+      margin-left: auto;
+      width: fit-content;
+      right: 0;
+    }
+    @include media(lg) {
+      right: 5.5%;
+    }
+    @include media(xl) {
+      position: absolute;
+      max-width: 24%;
+      top: auto;
+      right: 0;
+      bottom: 57%;
+    }
+    @include media(xxl) {
+      right: -1%;
+    }
+  }
+  &__text-bottom {
+    position: absolute;
+    bottom: 17px;
+    right: 31px;
+    @include media(md) {
+      right: 1%;
+    }
+    @include media(lg) {
+      right: 4%;
+    }
+    @include media(xl) {
+      bottom: 14.5%;
+    }
+    @include media(xxl) {
+      bottom: 14%;
+      right: 7%;
+    }
+  }
+  &__img {
+  }
+}

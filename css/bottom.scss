@@ -1,0 +1,78 @@
+.bottom {
+  background-image: url("../assets/image/bg-cloud-m.png");
+  background-image: -webkit-image-set(
+    url("../assets/image/bg-cloud-m.webp"),
+    url("../assets/image/bg-cloud-m.png")
+  );
+  background-image: image-set(
+    url("../assets/image/bg-cloud-m.webp") type("image/webp"),
+    url("../assets/image/bg-cloud-m.png") type("image/png")
+  );
+  background-color: #333087;
+  background-repeat: no-repeat;
+  background-position-y: 84%;
+  background-position-x: center;
+  background-size: 100%;
+  color: #ffffff;
+  padding-bottom: 90px;
+  @media (max-width: 320px) {
+    background-image: url("../assets/image/bg-cloud-s.png");
+    background-image: -webkit-image-set(
+      url("../assets/image/bg-cloud-s.webp"),
+      url("../assets/image/bg-cloud-s.png")
+    );
+    background-image: image-set(
+      url("../assets/image/bg-cloud-s.webp") type("image/webp"),
+      url("../assets/image/bg-cloud-s.png") type("image/png")
+    );
+    background-position-y: bottom;
+  }
+  @include media(md) {
+    padding-bottom: 261px;
+
+    background-position-y: bottom;
+  }
+  @media (min-width: 1025px) {
+    background-image: url("../assets/image/bg-cloud-l.png");
+    background-image: -webkit-image-set(
+      url("../assets/image/bg-cloud-l.webp"),
+      url("../assets/image/bg-cloud-l.png")
+    );
+    background-image: image-set(
+      url("../assets/image/bg-cloud-l.webp") type("image/webp"),
+      url("../assets/image/bg-cloud-l.png") type("image/png")
+    );
+  }
+  @include media(xl) {
+    padding-bottom: 326px;
+  }
+  @media (min-width: 1537px) {
+    background-size: auto;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 30px;
+    font-size: 25px;
+    @include media(md) {
+      font-size: 36px;
+      margin-top: 46px;
+    }
+    @include media(xl) {
+      font-size: 52px;
+      margin-top: 56px;
+    }
+  }
+
+  &__text--big {
+    font-size: 38px;
+    display: block;
+    margin-top: 4px;
+    @include media(md) {
+      font-size: 51px;
+    }
+    @include media(xl) {
+      font-size: 73px;
+    }
+  }
+}

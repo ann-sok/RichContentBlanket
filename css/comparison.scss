@@ -1,0 +1,73 @@
+.comparison {
+  color: #ffffff;
+
+  display: none;
+  @include media(md) {
+    display: block;
+    padding-top: 48px;
+  }
+  @include media(md) {
+    padding-top: 68px;
+  }
+  &__container {
+  }
+  &__title {
+    @include media(md) {
+      font-size: 54px;
+      margin-top: 0;
+    }
+
+    @include media(xl) {
+      font-size: 77px;
+    }
+  }
+  &__table {
+    @include media(md) {
+      max-width: 100%;
+      border-spacing: 12px 8px;
+      margin-top: 20px;
+    }
+    @include media(lg) {
+      border-spacing: 20px 12px;
+      margin-top: 38px;
+    }
+  }
+  &__name .comparison__td {
+    @include media(md) {
+      font-size: 35px;
+      padding: 10px 0 16px;
+    }
+    @include media(xl) {
+      font-size: 52px;
+      padding: 10px 0 12px;
+    }
+  }
+  &__options {
+    @include media(md) {
+      color: #ee7601;
+      text-align: left;
+    }
+    @include media(xl) {
+      font-size: 42px;
+    }
+  }
+  &__bg .comparison__td {
+    @include media(md) {
+      background-color: #ee7601;
+      padding: 17px 20px;
+      border-radius: 10px;
+      line-height: 1.11;
+    }
+    @include media(md) {
+      padding: 29px 20px;
+    }
+  }
+  &__img {
+    @include media(md) {
+      width: 401px;
+    }
+    @include media(xl) {
+      width: 566px;
+    }
+  }
+}
